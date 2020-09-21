@@ -1,0 +1,22 @@
+## spring注解
+### 定义配置
+	1. @Configuration
+	2. @ComoinentScan
+### 定义组件
+	1. @Component
+	2. @AutiWired
+	3. @Autowired(required=false)
+### 自动装配歧义性
+	1. @Primary
+	2. @Qualifier
+	3. @Resource
+### 分层架构中定义组件
+	1. @Controller
+	2. @Service
+	3. @Repository
+	4. @Repository
+### Spring测试环境
+	1. @RunWith
+	2. @ContextConfiguration
+### 使用xml启用组件扫描
+	<comtext:component-scan base-package="com...."/>

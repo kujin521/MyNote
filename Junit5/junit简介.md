@@ -1,0 +1,65 @@
+官方地址:https://junit.org/
+
+# 什么是 JUnit？
+
+JUnit 是一个 Java 编程语言的单元测试框架。JUnit 在测试驱动的开发方面有很重要的发展，是起源于 JUnit 的一个统称为 xUnit 的单元测试框架之一。
+
+JUnit 促进了“先测试后编码”的理念，强调建立测试数据的一段代码，可以先测试，然后再应用。这个方法就好比“测试一点，编码一点，测试一点，编码一点……”，增加了程序员的产量和程序的稳定性，可以减少程序员的压力和花费在排错上的时间。
+
+##  什么是Junit5?
+
+与以前的JUnit版本不同，JUnit 5由来自三个不同子项目的几个不同模块组成。
+
+JUnit 5 = JUnit平台 + JUnit Jupiter + JUnit Vintage
+
+### 特点：
+
+JUnit 是一个开放的资源框架，用于编写和运行测试。
+提供注释来识别测试方法。
+提供断言来测试预期结果。
+提供测试运行来运行测试。
+JUnit 测试允许你编写代码更快，并能提高质量。
+JUnit 优雅简洁。没那么复杂，花费时间较少。
+JUnit 测试可以自动运行并且检查自身结果并提供即时反馈。所以也没有必要人工梳理测试结果的报告。
+JUnit 测试可以被组织为测试套件，包含测试用例，甚至其他的测试套件。
+JUnit 在一个条中显示进度。如果运行良好则是绿色；如果运行失败，则变成红色。
+
+### 测试工具
+
+测试工具是一整套固定的工具用于基线测试。测试工具的目的是为了确保测试能够在共享且固定的环境中运行，因此保证测试结果的可重复性。它包括：
+
+在所有测试调用指令发起前的 setUp() 方法。
+在测试方法运行后的 tearDown() 方法。
+
+### 测试套件
+
+测试套件意味捆绑几个测试案例并且同时运行。在 JUnit 中，@RunWith 和 @Suite 都被用作运行测试套件。
+
+###  注解
+
+| 注解                                             | 描述                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| <strong style="color:red;">@Test</strong>        | 表示方法是测试方法。与JUnit 4的@Test注释不同，此注释不声明任何属性，因为JUnit Jupiter中的测试扩展基于其自己的专用注释进行操作。除非重写这些方法，否则它们将被继承。 |
+| @ParameterizedTest                               | 表示方法是参数化测试。除非重写这些方法，否则它们将被继承。   |
+| @RepeatedTest                                    | 表示方法是重复测试的测试模板。除非重写这些方法，否则它们将被继承。 |
+| <strong style="color:red;">@TestFactory</strong> | 表示方法是动态测试的测试工厂。除非重写这些方法，否则它们将被继承。 |
+| @TestTemplate                                    | 表示方法是测试用例的模板，测试用例设计为根据已注册提供程序返回的调用上下文的数量被多次调用。除非重写这些方法，否则它们将被继承。 |
+| @TestMethodOrder                                 | 用于为带注释的测试类配置测试方法的执行顺序；类似于JUnit 4的@FixMethodOrder。这样的注释是继承的。 |
+| @TestInstance                                    | 用于为带注释的测试类配置测试实例生命周期。这样的注释是继承的。 |
+| @DisplayName                                     | 声明测试类或测试方法的自定义显示名称。这样的注释不是继承的。 |
+| @DisplayNameGeneration                           | 声明测试类的自定义显示名称生成器。这样的注释是继承的。       |
+| <strong style="color:red;">@BeforeEach</strong>  | 表示该注释的方法应该被执行之前 的每个 @Test，@RepeatedTest，@ParameterizedTest，或@TestFactory方法在当前类; 类似于JUnit 4的@Before。除非重写这些方法，否则它们将被继承。 |
+| <strong style="color:red;">@AfterEach</strong>   | 表示该注释的方法应该被执行之后 每个 @Test，@RepeatedTest，@ParameterizedTest，或@TestFactory方法在当前类; 类似于JUnit 4的@After。除非重写这些方法，否则它们将被继承。 |
+| <strong style="color:red;">@BeforeAll</strong>   | 表示该注释的方法应该被执行之前 所有 @Test，@RepeatedTest，@ParameterizedTest，和@TestFactory方法在当前类; 类似于JUnit 4的@BeforeClass。此类方法是继承的（除非它们被隐藏或覆盖），并且必须被继承（除非static使用“每类” 测试实例生命周期）。 |
+| @AfterAll                                        | 表示该注释的方法应该被执行之后 的所有 @Test，@RepeatedTest，@ParameterizedTest，和@TestFactory方法在当前类; 类似于JUnit 4的@AfterClass。此类方法是继承的（除非它们被隐藏或覆盖），并且必须被继承（除非static使用“每类” 测试实例生命周期）。 |
+| @Nested                                          | 表示带注释的类是一个非静态的嵌套测试类。@BeforeAll和@AfterAll方法不能直接在使用@Nested测试类除非“每级” 测试实例的生命周期被使用。这样的注释不是继承的。 |
+| @Tag                                             | 用于在类或方法级别声明用于过滤测试的标签；类似于TestNG中的测试组或JUnit 4中的类别。此类注释在类级别继承，而不在方法级别继承。 |
+| @Disabled                                        | 用于禁用测试类或测试方法；类似于JUnit 4的@Ignore。这样的注释不是继承的。 |
+| <strong style="color:red;">@Timeout</strong>     | 如果执行超过给定的持续时间，则使测试，测试工厂，测试模板或生命周期方法失败。这样的注释是继承的。 |
+| @ExtendWith                                      | 用于声明性地注册扩展。这样的注释是继承的。                   |
+| @RegisterExtension                               | 用于通过字段以编程方式注册扩展。除非被遮盖，否则这些字段将被继承。 |
+| @TempDir                                         | 用于通过生命周期方法或测试方法中的字段注入或参数注入来提供临时目录；位于org.junit.jupiter.api.io包装中。 |
+|                                                  |                                                              |
+|                                                  |                                                              |
+|                                                  |                                                              |
+|                                                  |                                                              |
