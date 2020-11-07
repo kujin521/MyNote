@@ -1,20 +1,24 @@
 官方网站:https://opencv.org/
 
-环境:win10 opencv4.4.0 vs2019
+## 环境(版本号一定要对应):
 
-1. 添加系统环境变量:path
+ps: 不同的vs 对应不同的opencv  可以百度查看对应版本
+
+**win10** 	**opencv4.4.0** 	**vs2019**
+
+1. ### 添加系统环境变量:path
 
    ![image-20200906192821601](https://raw.githubusercontent.com/kujin521/Typora_images/master/img/path-20200906192821601.png)
 
-2. 安装vs2019 选择c++桌面程序
+2. ### 安装vs2019 选择c++桌面程序
 
    ![img](https://upload-images.jianshu.io/upload_images/18722523-6e6f654d390d8287.png?imageMogr2/auto-orient/strip|imageView2/2/w/715/format/webp)
 
-3. 创建一个项目
+3. ### 创建一个项目
 
    ![image-20200906193100877](https://raw.githubusercontent.com/kujin521/Typora_images/master/img/demo-20200906193100877.png)
 
-# 修改配置
+### 修改配置
 
 点击 项目>>>xx属性
 
@@ -24,16 +28,22 @@
 
 ![image-20200906193820095](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20200906193820095.png)
 
-> 附加依赖项: d :debug环境需要的,我这里两个都添加了
+> 附加依赖项: d :debug环境需要的,我这里两个都添加了(其实一个就行了) 经使用发现debug 模式下有错误 具体(元婴)未知–自己境界太低
 >
+> ```
 > opencv_world440.lib
 > opencv_world440d.lib
+> ```
 
 ![image-20200906194209922](https://raw.githubusercontent.com/kujin521/Typora_images/master/img/image-20200906194209922.png)
 
+选择**链接器**	**输入**	**附加依赖项**
+
 ![image-20200906194316233](https://raw.githubusercontent.com/kujin521/Typora_images/master/img/image-20200906194316233.png)
 
-# 测试代码
+
+
+### 测试代码
 
 > 关于图片路径可以是相对路径和绝对路径
 >

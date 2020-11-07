@@ -36,7 +36,7 @@
 - MySQL常见优化手段：掌握
 - 计算机网络、数据结构、算法、操作系统等课内基础知识：了解
 - Spring Boot +Vue +Docker:了解
-- Python 基础、一些常见第三方库比如OpenCV、matplotlib：了解
+- Python 基础、第三方爬虫的使用,一些常见第三方库比如OpenCV、matplotlib：了解
 
 
 
