@@ -501,9 +501,20 @@ drop table guidemessage;
 
 # 第七章 高级查询
 
+## 子查询
+
+> Oracle对from子句的嵌套没有限制 但where子句中对多可以嵌套255层子查询
+
+- 要将子查询放在括号内
+- 子查询可以出现在where from select列表 having 子句中
+- 子查询不能出现在主查询Group by语句中
+- 在where 子句和set子句中进行子查询 不能带有group by子句
+
 单行子查询
 
 ```plsql
 select select_list from table_name where search_condition(select select_list from table_name);
 ```
+
+
 
