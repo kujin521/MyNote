@@ -8,6 +8,14 @@
 
 ### 编写过程
 
+```plsql
+create procedure sp_pro1(
+	spName varchar2,
+)
+```
+
+
+
 ### 函数
 
 ### 触发器

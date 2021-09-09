@@ -34,7 +34,7 @@ wget http://download.redis.io/releases/redis-6.0.5.tar.gz
 tar xzf redis-6.0.5.tar.gz
 cd redis-6.0.5
 make
-# 注意 如果提示错误 In file included from adlist.c:34:0: zmalloc.h:50:31: fatal error: jemalloc/
+# （centos8没有该错误）注意 如果提示错误 In file included from adlist.c:34:0: zmalloc.h:50:31: fatal error: jemalloc/
 # 执行 make MALLOC=libc
 make install
 ```
@@ -119,5 +119,4 @@ docker run -p 6379:6379 --name redis -v $PWD/redis.conf:/root/redis/redis.conf -
 ```shell
 docker exec -it myredis redis-cli
 ```
-
 

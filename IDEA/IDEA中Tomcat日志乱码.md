@@ -22,4 +22,3 @@
 <p>7、另外在服务器上tomcat还需要设置&nbsp;server.xml中的参数，以防页面出现乱码</p>
 <p>&lt;Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000"&nbsp; redirectPort="8443"&nbsp; URIEncoding="UTF-8" /&gt;</p>
 <p>&lt;Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8" /&gt;</p>
-
