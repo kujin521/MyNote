@@ -1,0 +1,9 @@
+#忽略具体文件
+.849C9593-D756-4E56-8D6E-42412F2A707B
+Personal Vault
+
+#忽略类型文件
+*.rar
+*.gz
+*.mp4
+/.ecloud/

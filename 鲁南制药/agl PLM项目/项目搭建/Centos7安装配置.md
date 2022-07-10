@@ -43,7 +43,7 @@ java -version
 
 ```bash
 firewall-cmd --list-ports
-firewall-cmd --zone=public --add-port=8080/tcp --permanent 
+firewall-cmd --zone=public --add-port=80/tcp --permanent 
 firewall-cmd --reload  # 配置立即生效
 ```
 
